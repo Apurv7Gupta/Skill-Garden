@@ -1,0 +1,52 @@
+{
+  "Nodes": [
+    {
+      "id": "1",
+      "position": { "x": 0, "y": 0 },
+      "data": { "label": "Express" },
+      "type": "default"
+    },
+    {
+      "id": "2",
+      "position": { "x": 100, "y": 100 },
+      "data": { "label": "React" },
+      "type": "default"
+    },
+    {
+      "id": "3",
+      "type": "textUpdater",
+      "position": { "x": 300, "y": -5 },
+      "data": { "value": 123 }
+    },
+    {
+      "id": "Default",
+      "type": "DefaultNode",
+      "position": { "x": 200, "y": -150 },
+      "data": { "Name": "Default Node" }
+    }
+  ],
+
+  "Edges": [
+    {
+      "id": "1-2",
+      "source": "1",
+      "target": "2",
+      "label": "Backend",
+      "type": "step"
+    },
+    {
+      "id": "2-3",
+      "source": "2",
+      "target": "3",
+      "label": "",
+      "type": "StraightEd"
+    },
+    {
+      "id": "1-3",
+      "source": "1",
+      "target": "3",
+      "type": "ButtonEd",
+      "data": { "label": "Delete Edge" }
+    }
+  ]
+}
