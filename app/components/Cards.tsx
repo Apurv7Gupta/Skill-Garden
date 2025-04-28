@@ -1,4 +1,3 @@
-import { DisplaySettings } from "@mui/icons-material";
 import {
   Card,
   CardContent,
@@ -14,194 +13,76 @@ import {
 export default function Cards() {
   return (
     <>
-      <Container sx={{ display: "flex", flexDirection: "row", gap: 5 }}>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Interactive Visual Paths
-              </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                Explore this roadmap built with interactive nodes. Click through
-                skills, track progress, and shape your own learning path.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        {/* // */}
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Custom Roadmap Builder
-              </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                Design your own learning or project roadmap—node by node.
-                Visualize progress. Connect ideas. Stay on track. Custom
-                roadmaps, built your way..
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        {/* // */}
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Track Your Progress
-              </Typography>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                Visualize every step, mark what’s done, and see what’s next.
-                Your path, your pace—clearly mapped.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+      <Container
+        disableGutters
+        maxWidth={false}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "nowrap",
+          gap: { lg: 5, xs: 1, sm: 4, md: 8 },
+          p: { xs: 1, sm: 4, md: 8 },
+          justifyContent: "space-between",
+        }}
+      >
+        {[
+          {
+            title: "Interactive Visual Paths",
+            desc: "Explore this roadmap built with interactive nodes. Click through skills, track progress, and shape your own learning path.",
+            img: "https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg",
+          },
+          {
+            title: "Custom Roadmap Builder",
+            desc: "Design your own learning or project roadmap—node by node. Visualize progress. Connect ideas. Stay on track. Custom roadmaps, built your way.",
+            img: "https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg",
+          },
+          {
+            title: "Track Your Progress",
+            desc: "Visualize every step, mark what’s done, and see what’s next. Your path, your pace—clearly mapped.",
+            img: "https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg",
+          },
+        ].map((card, index) => (
+          <Card
+            key={index}
+            sx={{
+              flexShrink: 1,
+              width: "100%",
+              maxWidth: { xs: 180, sm: 250, md: 300 },
+            }}
+          >
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                sx={{ width: "auto" }}
+                image={card.img}
+                alt={card.title}
+              />
+              <CardContent sx={{ p: { xs: 1, sm: 2 } }}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  sx={{
+                    fontSize: { xs: "0.8rem", sm: "1rem", md: "1.25rem" }, // smaller title
+                    fontWeight: "bold",
+                  }}
+                  component="div"
+                >
+                  {card.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "text.secondary",
+                    fontSize: { xs: "0.35rem", sm: "0.8rem", md: "0.9rem" }, //compact body text
+                  }}
+                >
+                  {card.desc}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        ))}
       </Container>
     </>
   );
-}
-
-{
-  /* <Card sx={{ maxWidth: 345 }}>
-<CardActionArea>
-  <CardMedia
-    component="img"
-    height="140"
-    image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-    alt="green iguana"
-  />
-  <CardContent>
-    <Typography gutterBottom variant="h5" component="div">
-      Interactive Visual Paths
-    </Typography>
-    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-      Explore this roadmap built with interactive nodes. Click through
-              skills, track progress, and shape your own learning path.
-    </Typography>
-  </CardContent>
-</CardActionArea>
-</Card> */
-}
-
-//ORIGINAL
-
-{
-  /* <Grid
-  container
-  spacing={2}
-  className="flex flex-row sm:flex-row lg:py-52 sm:py-8 px-10 justify-between shrink-0"
->
-  <Card
-    sx={{
-      maxWidth: 345,
-      width: { xs: 100, sm: 200, lg: 345 },
-      height: "auto",
-    }}
-  >
-    <CardActionArea>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-        alt="Frontend Dev Roadmap"
-      />
-      <CardContent>
-        <Typography gutterBottom component="div" sx={{ fontsize: "auto" }}>
-          Interactive Visual Paths
-        </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Explore this roadmap built with interactive nodes. Click through
-          skills, track progress, and shape your own learning path.
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-    <CardActions>
-      <Button size="small" color="primary">
-        Share
-      </Button>
-    </CardActions>
-  </Card>
-
-  <Card
-    sx={{
-      maxWidth: 345,
-      width: { xs: 100, sm: 200, lg: 345 },
-      height: "auto",
-    }}
-  >
-    <CardActionArea>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-        alt="MidDev Roadmap"
-      />
-      <CardContent>
-        <Typography gutterBottom component="div" sx={{ fontsize: "auto" }}>
-          Custom Roadmap Builder
-        </Typography>
-        <Typography sx={{ color: "text.secondary", fontsize: "auto" }}>
-          Design your own learning or project roadmap—node by node. Visualize
-          progress. Connect ideas. Stay on track. Custom roadmaps, built your
-          way.
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-    <CardActions>
-      <Button size="small" color="primary">
-        Share
-      </Button>
-    </CardActions>
-  </Card>
-
-  <Card
-    sx={{
-      maxWidth: 345,
-      width: { xs: 100, sm: 200, lg: 345 },
-      height: { xs: 200, sm: 200, lg: 400 },
-    }}
-  >
-    <CardActionArea>
-      <CardMedia
-        component="img"
-        height="auto"
-        image="https://t3.ftcdn.net/jpg/05/24/07/12/240_F_524071224_dDPBBVX44e7NCgYBP91oV5X6l9kFmj7A.jpg"
-        alt="Backend Dev Roadmap"
-      />
-      <CardContent>
-        <Typography gutterBottom component="div" sx={{ fontsize: "auto" }}>
-          Track Your Progress
-        </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Visualize every step, mark what’s done, and see what’s next. Your
-          path, your pace—clearly mapped.
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-    <CardActions>
-      <Button size="small" color="primary">
-        Share
-      </Button>
-    </CardActions>
-  </Card>
-</Grid>; */
 }

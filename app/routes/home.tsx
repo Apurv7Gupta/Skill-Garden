@@ -110,6 +110,7 @@ const home = () => {
               width: "100%",
               textAlign: { lg: "right", xs: "center" },
               alignSelf: "center",
+              p: 5,
             }}
           >
             {/* Button outside Typography */}
