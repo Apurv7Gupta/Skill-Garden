@@ -1,10 +1,10 @@
 import { NavLink } from "react-router";
 import { Container, Typography, Button, Box } from "@mui/material";
-import { HeroImage } from "./components/sections/HeroImage";
-import { Blur } from "./components/blur";
-import Footer from "./components/sections/Footer";
-import Cards from "./components/Cards";
-import Preview from "./components/Preview";
+import { HeroImage } from "~/components/sections/HeroImage";
+import { Blur } from "~/components/blur";
+import Footer from "~/components/sections/Footer";
+import Cards from "~/components/Cards";
+import Preview from "~/components/Preview";
 
 export function meta() {
   return [{ title: "Home | Skill Garden" }];

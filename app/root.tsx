@@ -10,7 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Container } from "@mui/material";
-import Navbar from "./routes/components/Navbar";
+import Navbar from "~/components/Navbar";
 
 // LINKS
 

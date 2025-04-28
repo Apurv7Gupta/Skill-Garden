@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
-import { DefaultNode, TextUpdaterNode } from "./components/Nodes";
-import { ButtonEd, StraightEd } from "./components/Edges";
+import { DefaultNode, TextUpdaterNode } from "~/components/Nodes";
+import { ButtonEd, StraightEd } from "~/components/Edges";
 import { Box } from "@mui/material";
 import Flowdata from "~/Data/Flowdata.json";
 import {
