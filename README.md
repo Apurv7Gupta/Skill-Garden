@@ -1,87 +1,65 @@
-# Welcome to React Router!
+# Skill Garden
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+**Skill Garden** is an interactive platform for developers to visualize, create, and track their learning journey. With curated roadmaps, a custom builder, and progress tracking, it’s the perfect tool for anyone serious about leveling up their skills.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **Explore Curated Roadmaps**: Access predefined paths for various tech stacks (e.g., Frontend, Backend, Full-Stack).
+- **Build Custom Roadmaps**: Create your own learning paths with drag-and-drop functionality.
+- **Track Your Progress**: Mark milestones as completed and monitor your development progress.
+- **Interactive Experience**: Visualize your roadmap with clickable nodes and in-depth resources.
 
-## Getting Started
+## Demo
 
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Try the interactive demo directly on the homepage — no login required!
 
 ---
 
-Built with ❤️ using React Router.
+## 🛠️ **Work in Progress**
+
+This project is still under development, and here’s what's on the way:
+
+- **User Authentication**: Coming soon — account management for saving progress across devices.
+- **Roadmap Sharing**: Option to share and collaborate on custom roadmaps.
+- **Mobile Optimization**:Working on a fully responsive design for smooth mobile access.
+
+Feel free to contribute, suggest features, or open issues!
+
+---
+
+## Installation
+
+To run this project locally:
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Apurv7Gupta/Skill-Garden.git
+   ```
+   
+2. Install dependencies:
+   ```bash
+   cd Skill-Garden
+   npm install
+   ```
+   
+3. Start the app:
+   ```bash
+   npm start
+   ```
+
+---
+
+## Tech Stack
+
+- **React**: Frontend framework for building the UI.
+- **React Flow**: Used for creating interactive roadmap visualizations.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Material UI**: UI theme used by Google.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
