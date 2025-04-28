@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 
-export const Hero = () => {
+export const HeroImage = () => {
   return (
     <section className="relative pt-10 lg:pt-5">
       <Container className="flex">

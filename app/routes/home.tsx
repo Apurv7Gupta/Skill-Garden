@@ -1,5 +1,5 @@
 import { Container, Typography, Button, Box } from "@mui/material";
-import { Hero } from "./components/sections/Hero";
+import { HeroImage } from "./components/sections/HeroImage";
 import { Blur } from "./components/blur";
 import Footer from "./components/sections/Footer";
 import Cards from "./components/Cards";
@@ -79,7 +79,7 @@ const home = () => {
           </Box>
 
           {/* Hero Section */}
-          <Hero />
+          <HeroImage />
         </Container>
 
         <Cards />
