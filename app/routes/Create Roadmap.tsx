@@ -13,6 +13,10 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
+export function meta() {
+  return [{ title: "Create | Skill Garden" }];
+}
+
 const initialNodes = Flowdata.Nodes;
 
 const initialEdges = Flowdata.Edges;

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { Container, Typography, Button, Box } from "@mui/material";
 import { HeroImage } from "./components/sections/HeroImage";
 import { Blur } from "./components/blur";
@@ -124,19 +125,21 @@ const home = () => {
                 },
               }}
             >
-              <Button
-                fullWidth
-                sx={{
-                  alignSelf: "center",
-                  px: { xs: 2, sm: 4 },
-                  py: { xs: 1, sm: 2 },
-                }}
-                variant="contained"
-              >
-                <Typography sx={{ fontSize: { lg: "2rem" } }}>
-                  Create a path
-                </Typography>
-              </Button>
+              <NavLink to={"create"}>
+                <Button
+                  fullWidth
+                  sx={{
+                    alignSelf: "center",
+                    px: { xs: 2, sm: 4 },
+                    py: { xs: 1, sm: 2 },
+                  }}
+                  variant="contained"
+                >
+                  <Typography sx={{ fontSize: { lg: "2rem" } }}>
+                    Create a path
+                  </Typography>
+                </Button>
+              </NavLink>
             </Box>
             <Typography
               variant="h1"

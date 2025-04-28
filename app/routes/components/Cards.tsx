@@ -14,7 +14,7 @@ import {
 export default function Cards() {
   return (
     <>
-      <Container sx={{ display: "flex", flexDirection: "row" }}>
+      <Container sx={{ display: "flex", flexDirection: "row", gap: 5 }}>
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
@@ -34,7 +34,7 @@ export default function Cards() {
             </CardContent>
           </CardActionArea>
         </Card>
-        //
+        {/* // */}
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
@@ -55,7 +55,7 @@ export default function Cards() {
             </CardContent>
           </CardActionArea>
         </Card>
-        //
+        {/* // */}
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
