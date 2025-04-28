@@ -7,7 +7,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow p-4 min-w-[450px]">
+    <nav className="bg-gray-800 shadow p-4 min-w-[450px]">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between">
         <div className=" flex items-center justify-between mb-4 sm:mb-0">
           <NavLink to="/" className="flex text-2xl font-bold text-emerald-400">
@@ -56,7 +56,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? `text-emerald-400` : `text-gray-600`
+              isActive ? `text-emerald-400` : `text-gray-100`
             }
           >
             Home
@@ -65,7 +65,7 @@ const Navbar = () => {
           <NavLink
             to="roadmaps"
             className={({ isActive }) =>
-              isActive ? "text-emerald-400" : `text-gray-600`
+              isActive ? "text-emerald-400" : `text-gray-100`
             }
           >
             Roadmaps
@@ -74,7 +74,7 @@ const Navbar = () => {
           <NavLink
             to="create"
             className={({ isActive }) =>
-              isActive ? "text-emerald-400" : `text-gray-600`
+              isActive ? "text-emerald-400" : `text-gray-100`
             }
           >
             Create Path
@@ -83,7 +83,7 @@ const Navbar = () => {
           <NavLink
             to="about"
             className={({ isActive }) =>
-              isActive ? "text-emerald-400" : `text-gray-600`
+              isActive ? "text-emerald-400" : `text-gray-100`
             }
           >
             About

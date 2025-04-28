@@ -13,7 +13,7 @@ export function meta() {
 const home = () => {
   return (
     <>
-      <Container className="min-w-[450px]">
+      <Container disableGutters maxWidth={false} className="min-w-[450px]">
         <Container
           disableGutters
           maxWidth={false}
