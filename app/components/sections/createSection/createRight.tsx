@@ -1,10 +1,11 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 
-export default function CreateLeft() {
+export default function CreateRight() {
   return (
     <>
       <Button
         variant="contained"
+        color="success"
         fullWidth
         sx={{
           color: "white",
@@ -16,7 +17,7 @@ export default function CreateLeft() {
           },
         }}
       >
-        Edit Nodes
+        Add Nodes
       </Button>
 
       <Box
@@ -49,7 +50,7 @@ export default function CreateLeft() {
             },
           }}
         >
-          Delete Edge
+          Add Node
         </Button>
         <Button
           variant="contained"
@@ -73,7 +74,7 @@ export default function CreateLeft() {
             },
           }}
         >
-          Change Type
+          Add Branch
         </Button>
       </Box>
     </>

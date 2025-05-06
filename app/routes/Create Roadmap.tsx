@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import CreateLeft from "~/components/sections/createSection/createLeft";
+import CreateRight from "~/components/sections/createSection/createRight";
 import Create from "~/components/sections/createSection/Create";
 
 export function meta() {
@@ -40,7 +41,7 @@ export default function CreateRoadmap() {
             bgcolor: "#f0f0f0",
           }}
         >
-          {/* Right panel content */}
+          <CreateRight />
         </Box>
       </Box>
     </>
