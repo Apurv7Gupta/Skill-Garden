@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-
-import Create from "~/components/sections/Create";
+import CreateLeft from "~/components/sections/createSection/createLeft";
+import Create from "~/components/sections/createSection/Create";
 
 export function meta() {
   return [{ title: "Create | Skill Garden" }];
@@ -9,8 +9,8 @@ export function meta() {
 export default function CreateRoadmap() {
   return (
     <>
+      {/* Left Panel */}
       <Box sx={{ display: "flex", height: "100vh" }}>
-        {/* Left Panel */}
         <Box
           sx={{
             flexBasis: {
@@ -22,7 +22,7 @@ export default function CreateRoadmap() {
             bgcolor: "#f0f0f0",
           }}
         >
-          {/* Left panel content */}
+          <CreateLeft />
         </Box>
 
         {/* Center React Flow Panel */}

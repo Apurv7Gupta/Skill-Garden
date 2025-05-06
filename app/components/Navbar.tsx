@@ -77,7 +77,7 @@ const Navbar = () => {
               isActive ? "text-emerald-400" : `text-gray-100`
             }
           >
-            Create Path
+            Create Roadmap
           </NavLink>
 
           <NavLink
