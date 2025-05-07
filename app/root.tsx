@@ -2,7 +2,6 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -10,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { Box, Button, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import Navbar from "~/components/Navbar";
 
 // LINKS
@@ -89,28 +88,14 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <>
-      <Container sx={{ minWidth: "450px" }}>
-        <main className="pt-16 p-4 container mx-auto">
-          <h1 className=" justify-self-center text-6xl text-emerald-500">
-            {message}
-          </h1>
-          <p className="justify-self-center text-6xl text-white">{details}</p>
-          {stack && (
-            <pre className="w-full p-4 overflow-x-auto">
-              <code>{stack}</code>
-            </pre>
-          )}
-
-          <Box sx={{ justifySelf: "center" }}>
-            <NavLink to="/">
-              <Button variant="contained" sx={{ m: 6, p: 6, fontSize: 50 }}>
-                Back To Home
-              </Button>
-            </NavLink>
-          </Box>
-        </main>
-      </Container>
-    </>
+    <main className="pt-16 p-4 container mx-auto">
+      <h1>{message}</h1>
+      <p>{details}</p>
+      {stack && (
+        <pre className="w-full p-4 overflow-x-auto">
+          <code>{stack}</code>
+        </pre>
+      )}
+    </main>
   );
 }
