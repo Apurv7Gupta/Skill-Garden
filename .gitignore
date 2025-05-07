@@ -5,5 +5,5 @@
 /.react-router/
 /build/
 
-#OWN
-./app/routes/Explore.tsx
+# OWN
+app/routes/Explore.tsx
