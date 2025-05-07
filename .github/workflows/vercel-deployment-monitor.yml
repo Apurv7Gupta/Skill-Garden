@@ -1,0 +1,24 @@
+name: Monitor Vercel Deployments
+
+on:
+  workflow_run:
+    workflows: ["Vercel Deployment"]  # This should be the name of the Vercel Deployment workflow
+    types:
+      - completed
+
+jobs:
+  revert_to_commit:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}  # Trigger only if Vercel fails
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Revert to previous commit
+        run: |
+          git reset --hard 4b665a15f885c2444a63d40b2ef10d0f95c65d19
+          git push origin production --force
+
+      - name: Notify Slack (Optional)
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"Vercel deployment failed! The branch has been reverted."}' https://hooks.slack.com/services/your/webhook/url
