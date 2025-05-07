@@ -4,7 +4,7 @@
 
 ## Features
 
-- **Explore Curated Roadmaps**: Access predefined paths for various tech stacks (e.g., Frontend, Backend, Full-Stack).
+- **Explore Curated Roadmaps**: Access predefined paths for various tech stacks (e.g.: Frontend, Backend, Full-Stack).
 - **Build Custom Roadmaps**: Create your own learning paths with drag-and-drop functionality.
 - **Track Your Progress**: Mark milestones as completed and monitor your development progress.
 - **Interactive Experience**: Visualize your roadmap with clickable nodes and in-depth resources.
