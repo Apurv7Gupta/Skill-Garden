@@ -20,7 +20,7 @@ Try the interactive demo directly on the homepage — no login required!
 This project is still under development, and here’s what's on the way:
 
 - **User Authentication**: Coming soon — account management for saving progress across devices.
-- **Roadmap Sharing**: Option to share and collaborate on custom roadmaps.
+- **Create Roadmap UI**: Building the UI for the creation of roadmaps.
 - **Mobile Optimization**:Working on a fully responsive design for smooth mobile access.
 
 Feel free to contribute, suggest features, or open issues!
