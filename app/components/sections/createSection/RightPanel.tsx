@@ -1,6 +1,7 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Search } from "@mui/icons-material";
+import { Box, Typography, Button, TextField } from "@mui/material";
 
-export default function CreateRight() {
+export default function RightPanel() {
   return (
     <>
       <Button
@@ -8,8 +9,9 @@ export default function CreateRight() {
         color="success"
         fullWidth
         sx={{
+          borderRadius: "0",
           color: "white",
-          fontWeight: 600,
+          fontWeight: 400,
           fontSize: {
             xs: "0.7rem",
             sm: "1rem",
@@ -17,19 +19,50 @@ export default function CreateRight() {
           },
         }}
       >
-        Add Nodes
+        Add
       </Button>
+      <Box
+        sx={{
+          p: 2,
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            bgcolor: "cornflowerblue",
+            borderRadius: 2,
+            px: 2,
+          }}
+        >
+          <Search sx={{ color: "white" }}></Search>
+          <Typography variant="button" sx={{ p: 2, color: "white" }}>
+            Search Node
+          </Typography>
+          <TextField
+            color="primary"
+            placeholder="Node Type/Name"
+            sx={{ color: "white", fontSize: "0.9rem" }}
+          ></TextField>
+        </Box>
+      </Box>
+
+      {/* {Button container} */}
 
       <Box
         sx={{
-          pt: { xs: 2, sm: 4 },
+          m: 2,
+          p: { xs: 2, sm: 4 },
           display: "flex",
           justifyContent: { xs: "center", sm: "flex-start" },
           gap: 2,
+          bgcolor: "lavender",
+          borderRadius: 2,
         }}
       >
         <Button
           variant="contained"
+          color="success"
           sx={{
             fontSize: {
               xs: "0.3rem",
@@ -54,6 +87,7 @@ export default function CreateRight() {
         </Button>
         <Button
           variant="contained"
+          color="secondary"
           sx={{
             fontSize: {
               xs: "0.3rem",
