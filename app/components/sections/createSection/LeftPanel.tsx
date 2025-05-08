@@ -1,14 +1,15 @@
 import { Box, Button, Typography } from "@mui/material";
 
-export default function CreateLeft() {
+export default function LeftPanel() {
   return (
     <>
       <Button
         variant="contained"
         fullWidth
         sx={{
+          borderRadius: "0",
           color: "white",
-          fontWeight: 600,
+          fontWeight: 400,
           fontSize: {
             xs: "0.7rem",
             sm: "1rem",
@@ -16,19 +17,24 @@ export default function CreateLeft() {
           },
         }}
       >
-        Edit Nodes
+        Edit
       </Button>
 
+      {/* Button Container */}
       <Box
         sx={{
-          pt: { xs: 2, sm: 4 },
+          m: 2,
+          p: { xs: 2, sm: 4 },
           display: "flex",
           justifyContent: { xs: "center", sm: "flex-start" },
           gap: 2,
+          bgcolor: "lavender",
+          borderRadius: 2,
         }}
       >
         <Button
           variant="contained"
+          color="error"
           sx={{
             fontSize: {
               xs: "0.3rem",
@@ -53,6 +59,7 @@ export default function CreateLeft() {
         </Button>
         <Button
           variant="contained"
+          color="info"
           sx={{
             fontSize: {
               xs: "0.3rem",
