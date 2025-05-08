@@ -27,21 +27,53 @@ export default function RightPanel() {
       >
         <Box
           sx={{
+            flexWrap: "nowrap",
+            justifyContent: "center",
             display: "flex",
             alignItems: "center",
             bgcolor: "cornflowerblue",
             borderRadius: 2,
-            px: 2,
+            px: { lg: 2, md: 1.5, sm: 1, xs: 0.3 },
           }}
         >
-          <Search sx={{ color: "white" }}></Search>
-          <Typography variant="button" sx={{ p: 2, color: "white" }}>
+          <Search
+            sx={{
+              color: "white",
+              fontSize: {
+                xs: "0.3rem",
+                sm: "0.4rem",
+                md: "1.5rem",
+                lg: "2rem",
+              },
+            }}
+          ></Search>
+          <Typography
+            variant="button"
+            sx={{
+              p: 2,
+              color: "white",
+              fontSize: {
+                xs: "0.3rem",
+                sm: "0.4rem",
+                md: "0.6rem",
+                lg: "0.9rem",
+              },
+            }}
+          >
             Search Node
           </Typography>
           <TextField
             color="primary"
             placeholder="Node Type/Name"
-            sx={{ color: "white", fontSize: "0.9rem" }}
+            sx={{
+              color: "white",
+              fontSize: {
+                xs: "0.3rem",
+                sm: "0.4rem",
+                md: "0.6rem",
+                lg: "0.9rem",
+              },
+            }}
           ></TextField>
         </Box>
       </Box>
@@ -51,12 +83,13 @@ export default function RightPanel() {
       <Box
         sx={{
           m: 2,
-          p: { xs: 2, sm: 4 },
+          p: { xs: 1, sm: 2, md: 3 },
           display: "flex",
-          justifyContent: { xs: "center", sm: "flex-start" },
-          gap: 2,
+          justifyContent: "center",
+          gap: { xs: 1, sm: 2 },
           bgcolor: "lavender",
           borderRadius: 2,
+          flexWrap: "nowrap", // stay in one row
         }}
       >
         <Button
@@ -65,9 +98,9 @@ export default function RightPanel() {
           sx={{
             fontSize: {
               xs: "0.3rem",
-              sm: "0.75rem",
-              md: "0.875rem",
-              lg: "1rem",
+              sm: "0.4rem",
+              md: "0.6rem",
+              lg: "0.9rem",
             },
 
             px: {
@@ -80,6 +113,8 @@ export default function RightPanel() {
               sm: 0.5,
               md: 1,
             },
+            minWidth: 0,
+            flexShrink: 1,
           }}
         >
           Add Node
@@ -90,9 +125,9 @@ export default function RightPanel() {
           sx={{
             fontSize: {
               xs: "0.3rem",
-              sm: "0.75rem",
-              md: "0.875rem",
-              lg: "1rem",
+              sm: "0.4rem",
+              md: "0.6rem",
+              lg: "0.9rem",
             },
 
             px: {
@@ -105,6 +140,8 @@ export default function RightPanel() {
               sm: 0.5,
               md: 1,
             },
+            minWidth: 0,
+            flexShrink: 1,
           }}
         >
           Add Branch

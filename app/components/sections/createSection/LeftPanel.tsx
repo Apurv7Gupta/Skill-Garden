@@ -19,17 +19,17 @@ export default function LeftPanel() {
       >
         Edit
       </Button>
-
       {/* Button Container */}
       <Box
         sx={{
           m: 2,
-          p: { xs: 2, sm: 4 },
+          p: { xs: 1, sm: 2, md: 3 },
           display: "flex",
-          justifyContent: { xs: "center", sm: "flex-start" },
-          gap: 2,
+          justifyContent: "center",
+          gap: { xs: 1, sm: 2 },
           bgcolor: "lavender",
           borderRadius: 2,
+          flexWrap: "nowrap", // stay in one row
         }}
       >
         <Button
@@ -38,21 +38,22 @@ export default function LeftPanel() {
           sx={{
             fontSize: {
               xs: "0.3rem",
-              sm: "0.75rem",
-              md: "0.875rem",
-              lg: "1rem",
+              sm: "0.4rem",
+              md: "0.6rem",
+              lg: "0.9rem",
             },
-
             px: {
               xs: 1,
-              sm: 2,
-              md: 3,
+              sm: 1.5,
+              md: 2,
             },
             py: {
               xs: 0.25,
               sm: 0.5,
-              md: 1,
+              md: 0.75,
             },
+            minWidth: 0,
+            flexShrink: 1,
           }}
         >
           Delete Edge
@@ -63,21 +64,22 @@ export default function LeftPanel() {
           sx={{
             fontSize: {
               xs: "0.3rem",
-              sm: "0.75rem",
-              md: "0.875rem",
-              lg: "1rem",
+              sm: "0.4rem",
+              md: "0.6rem",
+              lg: "0.9rem",
             },
-
             px: {
               xs: 1,
-              sm: 2,
-              md: 3,
+              sm: 1.5,
+              md: 2,
             },
             py: {
               xs: 0.25,
               sm: 0.5,
-              md: 1,
+              md: 0.75,
             },
+            minWidth: 0,
+            flexShrink: 1,
           }}
         >
           Change Type
