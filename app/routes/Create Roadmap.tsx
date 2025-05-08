@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import CreateLeft from "~/components/sections/createSection/createLeft";
+import CreateLeft from "~/components/sections/createSection/LeftPanel";
 import CreateRight from "~/components/sections/createSection/createRight";
 import Create from "~/components/sections/createSection/Create";
 
