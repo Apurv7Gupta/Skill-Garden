@@ -74,7 +74,9 @@ const home = () => {
                 }}
                 variant="contained"
               >
-                <Typography variant="h6">Explore Roadmaps</Typography>
+                <NavLink to={"/Explore"}>
+                  <Typography variant="h6">Explore Roadmaps</Typography>
+                </NavLink>
               </Button>
             </Box>
           </Box>
