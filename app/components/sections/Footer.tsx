@@ -57,7 +57,7 @@ export default function Footer() {
           </IconButton>
         </NavLink>
 
-        <NavLink to="/">
+        <NavLink to="https://www.linkedin.com/in/apurv7gupta">
           <IconButton>
             <LinkedInIcon
               sx={{
