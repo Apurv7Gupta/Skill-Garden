@@ -1,4 +1,3 @@
-import { Search } from "@mui/icons-material";
 import { Box, Typography, Button, TextField } from "@mui/material";
 
 export default function RightPanel() {
@@ -26,7 +25,7 @@ export default function RightPanel() {
           p: 2,
         }}
       >
-        {/* <Box
+        <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -35,7 +34,6 @@ export default function RightPanel() {
             px: 2,
           }}
         >
-          <Search sx={{ color: "white" }}></Search>
           <Typography variant="button" sx={{ p: 2, color: "white" }}>
             Search Node
           </Typography>
@@ -44,7 +42,7 @@ export default function RightPanel() {
             placeholder="Node Type/Name"
             sx={{ color: "white", fontSize: "0.9rem" }}
           ></TextField>
-        </Box> */}
+        </Box>
       </Box>
 
       {/* {Button container} */}
