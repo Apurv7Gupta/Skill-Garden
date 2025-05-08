@@ -10,6 +10,7 @@ import {
   addEdge,
   applyEdgeChanges,
   applyNodeChanges,
+  BackgroundVariant,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
@@ -59,7 +60,7 @@ export default function Create() {
         minWidth: 250,
         maxWidth: 1000,
         height: "100vh",
-        bgcolor: "white",
+        bgcolor: "#505050",
       }}
     >
       <ReactFlow
