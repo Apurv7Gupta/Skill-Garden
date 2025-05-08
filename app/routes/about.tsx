@@ -4,7 +4,7 @@ export function meta() {
 
 export default function About() {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16 text-center space-y-10">
+    <section className="max-w-5xl min-w-[450px] mx-auto px-6 py-16 text-center space-y-10">
       <h1 className="text-5xl font-extrabold tracking-tight text-green-400">
         Welcome to Skill Garden
       </h1>
