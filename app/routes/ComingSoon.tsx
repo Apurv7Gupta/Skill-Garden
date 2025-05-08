@@ -11,7 +11,6 @@ const ComingSoon = () => {
       sx={{
         height: "100vh",
         width: "100%",
-        minWidth: "450px",
         bgcolor: "#0e0e0e",
         color: "#fff",
         display: "flex",

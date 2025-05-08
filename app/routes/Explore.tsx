@@ -8,7 +8,7 @@ export function meta() {
 export default function Explore() {
   return (
     <>
-      <Container disableGutters maxWidth={false} sx={{ minWidth: "450px" }}>
+      <Container disableGutters maxWidth={false}>
         <Typography
           variant="h1"
           sx={{
