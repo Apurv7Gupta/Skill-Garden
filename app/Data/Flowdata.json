@@ -1,50 +1,48 @@
 {
   "Nodes": [
     {
-      "id": "1",
-      "position": { "x": 0, "y": 0 },
+      "id": "Connect",
+      "position": { "x": 250, "y": 55 },
       "data": { "label": "Connnect a node" },
       "type": "default"
     },
     {
-      "id": "2",
-      "position": { "x": 100, "y": 100 },
+      "id": "Start",
+      "position": { "x": 125, "y": 200 },
       "data": { "label": "Start Here" },
       "type": "default"
     },
     {
-      "id": "3",
+      "id": "Text",
       "type": "textUpdater",
-      "position": { "x": 300, "y": 5 },
+      "position": { "x": 10, "y": 50 },
       "data": { "value": 123 }
     },
     {
       "id": "Default",
       "type": "DefaultNode",
-      "position": { "x": 200, "y": -150 },
+      "position": { "x": 200, "y": -100 },
       "data": { "Name": "Default Node" }
     }
   ],
-
   "Edges": [
     {
-      "id": "1-2",
-      "source": "1",
-      "target": "2",
-      "label": "Add an Edge Label",
-      "type": "step"
+      "id": "Text-Start",
+      "source": "Text",
+      "target": "Start",
+      "label": "add some text",
+      "type": "default"
     },
     {
-      "id": "2-3",
-      "source": "2",
-      "target": "3",
-      "label": "",
-      "type": "StraightEd"
+      "id": "Connect-Start",
+      "source": "Connect",
+      "target": "Start",
+      "type": "default"
     },
     {
-      "id": "1-3",
-      "source": "1",
-      "target": "3",
+      "id": "Text-Connect",
+      "source": "Default",
+      "target": "Text",
       "type": "ButtonEd",
       "data": { "label": "Delete Edge" }
     }

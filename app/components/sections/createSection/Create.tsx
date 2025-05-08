@@ -1,26 +1,14 @@
-import { useState, useCallback } from "react";
 import { DefaultNode, TextUpdaterNode } from "~/components/Nodes";
 import { ButtonEd, StraightEd } from "~/components/Edges";
 import { Box } from "@mui/material";
 import Flowdata from "~/Data/Flowdata.json";
-import {
-  ReactFlow,
-  Background,
-  Controls,
-  addEdge,
-  applyEdgeChanges,
-  applyNodeChanges,
-  BackgroundVariant,
-} from "@xyflow/react";
+import useFlowState from "~/Data/useFlowState";
+import { ReactFlow, Background, Controls } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
 export function meta() {
   return [{ title: "Create | Skill Garden" }];
 }
-
-export const initialNodes = Flowdata.Nodes;
-
-export const initialEdges = Flowdata.Edges;
 
 const nodeTypes = {
   textUpdater: TextUpdaterNode,
@@ -32,22 +20,8 @@ const edgeTypes = {
   ButtonEd: ButtonEd,
 };
 export default function Create() {
-  const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState(initialEdges);
-
-  // OnChange & OnConnect
-  const onNodesChange = useCallback(
-    (changes: any) => setNodes((nds) => applyNodeChanges(changes, nds)),
-    []
-  );
-  const onEdgesChange = useCallback(
-    (changes: any) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    []
-  );
-  const onConnect = useCallback(
-    (connection: any) => setEdges((eds) => addEdge(connection, eds)),
-    [setEdges]
-  );
+  const { nodes, edges, onNodesChange, onEdgesChange, onConnect } =
+    useFlowState();
   return (
     <Box
       sx={{
@@ -60,7 +34,7 @@ export default function Create() {
         minWidth: 250,
         maxWidth: 1000,
         height: "100vh",
-        bgcolor: "#505050",
+        bgcolor: "#043437",
       }}
     >
       <ReactFlow

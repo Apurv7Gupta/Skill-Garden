@@ -1,11 +1,11 @@
-//currently unused
-
 import { useState, useCallback } from "react";
 import { applyNodeChanges, applyEdgeChanges, addEdge } from "@xyflow/react";
 import Flowdata from "./Flowdata.json";
-const [nodes, setNodes] = useState(Flowdata.Nodes);
-const [edges, setEdges] = useState(Flowdata.Edges);
+
 export default function useFlowState() {
+  const [nodes, setNodes] = useState(Flowdata.Nodes);
+  const [edges, setEdges] = useState(Flowdata.Edges);
+
   const onNodesChange = useCallback(
     (changes: any) => setNodes((nds) => applyNodeChanges(changes, nds)),
     []

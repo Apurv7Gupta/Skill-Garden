@@ -1,21 +1,10 @@
-import { useState, useCallback } from "react";
 import { DefaultNode, TextUpdaterNode } from "./Nodes";
 import { ButtonEd, StraightEd } from "./Edges";
-import { Box } from "@mui/material";
-import Flowdata from "~/Data/Flowdata.json";
-import {
-  ReactFlow,
-  Background,
-  Controls,
-  addEdge,
-  applyEdgeChanges,
-  applyNodeChanges,
-} from "@xyflow/react";
+import { Box, Button } from "@mui/material";
+import Flowdata from "app/Data/Flowdata.json";
+import useFlowState from "~/Data/useFlowState";
+import { ReactFlow, Background, Controls } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-
-const initialNodes = Flowdata.Nodes;
-
-const initialEdges = Flowdata.Edges;
 
 const nodeTypes = {
   textUpdater: TextUpdaterNode,
@@ -28,23 +17,21 @@ const edgeTypes = {
 };
 
 export default function Preview() {
-  // state hooks: nodes & edges
-  const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState(initialEdges);
+  const {
+    nodes,
+    edges,
+    onNodesChange,
+    onEdgesChange,
+    onConnect,
+    setEdges,
+    setNodes,
+  } = useFlowState();
 
-  // OnChange & OnConnect
-  const onNodesChange = useCallback(
-    (changes: any) => setNodes((nds) => applyNodeChanges(changes, nds)),
-    []
-  );
-  const onEdgesChange = useCallback(
-    (changes: any) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    []
-  );
-  const onConnect = useCallback(
-    (connection: any) => setEdges((eds) => addEdge(connection, eds)),
-    [setEdges]
-  );
+  const Reset = () => {
+    setNodes(Flowdata.Nodes);
+    setEdges(Flowdata.Edges);
+  };
+
   return (
     <>
       <Box
@@ -64,9 +51,12 @@ export default function Preview() {
           edgeTypes={edgeTypes}
           fitView
         >
-          <Background />
           <Controls />
+          <Background />
         </ReactFlow>
+        <Button variant="contained" onClick={Reset} sx={{ mt: 1 }}>
+          Reset
+        </Button>
       </Box>
     </>
   );
