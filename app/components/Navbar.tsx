@@ -68,7 +68,7 @@ const Navbar = () => {
               isActive ? "text-emerald-400" : `text-gray-100`
             }
           >
-            Roadmaps
+            Explore
           </NavLink>
 
           <NavLink
@@ -114,7 +114,7 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink
-              to="Roadmaps"
+              to="Explore"
               className={({ isActive }) =>
                 isActive ? "text-emerald-400" : `text-gray-600`
               }
