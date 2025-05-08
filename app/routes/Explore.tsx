@@ -1,4 +1,4 @@
-import { Search } from "@mui/icons-material";
+import Search from "@mui/icons-material/Search";
 import { Box, Container, TextField, Typography } from "@mui/material";
 
 export function meta() {

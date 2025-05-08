@@ -1,5 +1,5 @@
 import { Box, Typography, Button, TextField } from "@mui/material";
-
+import Search from "@mui/icons-material/Search";
 export default function RightPanel() {
   return (
     <>
@@ -34,6 +34,7 @@ export default function RightPanel() {
             px: 2,
           }}
         >
+          <Search sx={{ color: "white" }}></Search>
           <Typography variant="button" sx={{ p: 2, color: "white" }}>
             Search Node
           </Typography>
