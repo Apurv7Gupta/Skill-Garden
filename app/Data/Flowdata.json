@@ -3,19 +3,19 @@
     {
       "id": "1",
       "position": { "x": 0, "y": 0 },
-      "data": { "label": "Express" },
+      "data": { "label": "Connnect a node" },
       "type": "default"
     },
     {
       "id": "2",
       "position": { "x": 100, "y": 100 },
-      "data": { "label": "React" },
+      "data": { "label": "Start Here" },
       "type": "default"
     },
     {
       "id": "3",
       "type": "textUpdater",
-      "position": { "x": 300, "y": -5 },
+      "position": { "x": 300, "y": 5 },
       "data": { "value": 123 }
     },
     {
@@ -31,7 +31,7 @@
       "id": "1-2",
       "source": "1",
       "target": "2",
-      "label": "Backend",
+      "label": "Add an Edge Label",
       "type": "step"
     },
     {
