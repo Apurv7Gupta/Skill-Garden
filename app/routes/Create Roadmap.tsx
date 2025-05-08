@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import CreateLeft from "~/components/sections/createSection/LeftPanel";
-import CreateRight from "~/components/sections/createSection/createRight";
+import CreateRight from "~/components/sections/createSection/RightPanel";
 import Create from "~/components/sections/createSection/Create";
 
 export function meta() {
