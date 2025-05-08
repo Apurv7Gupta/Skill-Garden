@@ -26,7 +26,7 @@ export default function RightPanel() {
           p: 2,
         }}
       >
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -44,7 +44,7 @@ export default function RightPanel() {
             placeholder="Node Type/Name"
             sx={{ color: "white", fontSize: "0.9rem" }}
           ></TextField>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* {Button container} */}
