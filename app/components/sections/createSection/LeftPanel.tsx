@@ -19,71 +19,85 @@ export default function LeftPanel() {
       >
         Edit
       </Button>
-      {/* Button Container */}
       <Box
         sx={{
-          m: 2,
-          p: { xs: 1, sm: 2, md: 3 },
           display: "flex",
-          justifyContent: "center",
-          gap: { xs: 1, sm: 2 },
-          bgcolor: "lavender",
-          borderRadius: 2,
-          flexWrap: "nowrap", // stay in one row
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignContent: "center",
         }}
       >
-        <Button
-          variant="contained"
-          color="error"
+        {/* Button Container */}
+        <Box
           sx={{
-            fontSize: {
-              xs: "0.3rem",
-              sm: "0.4rem",
-              md: "0.6rem",
-              lg: "0.9rem",
-            },
-            px: {
-              xs: 1,
-              sm: 1.5,
-              md: 2,
-            },
-            py: {
-              xs: 0.25,
-              sm: 0.5,
-              md: 0.75,
-            },
-            minWidth: 0,
-            flexShrink: 1,
+            m: 2,
+            p: { xs: 1, sm: 2, md: 3 },
+            display: "flex",
+            justifyContent: "center",
+            gap: { xs: 1, sm: 2 },
+            bgcolor: "lavender",
+            borderRadius: 2,
+            flexWrap: "nowrap", // stay in one row
           }}
         >
-          Delete Edge
-        </Button>
-        <Button
-          variant="contained"
-          color="info"
-          sx={{
-            fontSize: {
-              xs: "0.3rem",
-              sm: "0.4rem",
-              md: "0.6rem",
-              lg: "0.9rem",
-            },
-            px: {
-              xs: 1,
-              sm: 1.5,
-              md: 2,
-            },
-            py: {
-              xs: 0.25,
-              sm: 0.5,
-              md: 0.75,
-            },
-            minWidth: 0,
-            flexShrink: 1,
-          }}
-        >
-          Change Type
-        </Button>
+          <Button
+            variant="contained"
+            color="error"
+            sx={{
+              fontSize: {
+                xs: "0.3rem",
+                sm: "0.4rem",
+                md: "0.6rem",
+                lg: "0.9rem",
+              },
+              px: {
+                xs: 1,
+                sm: 1.5,
+                md: 2,
+              },
+              py: {
+                xs: 0.25,
+                sm: 0.5,
+                md: 0.75,
+              },
+              minWidth: 0,
+              flexShrink: 1,
+            }}
+          >
+            Delete Edge
+          </Button>
+          <Button
+            variant="contained"
+            color="info"
+            sx={{
+              fontSize: {
+                xs: "0.3rem",
+                sm: "0.4rem",
+                md: "0.6rem",
+                lg: "0.9rem",
+              },
+              px: {
+                xs: 1,
+                sm: 1.5,
+                md: 2,
+              },
+              py: {
+                xs: 0.25,
+                sm: 0.5,
+                md: 0.75,
+              },
+              minWidth: 0,
+              flexShrink: 1,
+            }}
+          >
+            Change Type
+          </Button>
+        </Box>
+        <Box sx={{ width: "100%", p: 2 }}>
+          <Button variant="contained" color="success" sx={{ width: "100%" }}>
+            Save Roadmap
+          </Button>
+        </Box>
       </Box>
     </>
   );
