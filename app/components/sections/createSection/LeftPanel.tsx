@@ -94,7 +94,19 @@ export default function LeftPanel() {
           </Button>
         </Box>
         <Box sx={{ width: "100%", p: 2 }}>
-          <Button variant="contained" color="success" sx={{ width: "100%" }}>
+          <Button
+            variant="contained"
+            color="success"
+            sx={{
+              width: "100%",
+              fontSize: {
+                xs: "0.4rem",
+                sm: "0.4rem",
+                md: "0.7rem",
+                lg: "1rem",
+              },
+            }}
+          >
             Save Roadmap
           </Button>
         </Box>
