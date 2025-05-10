@@ -53,9 +53,10 @@ To run this project locally:
 
 - **React**: Frontend framework for building the UI.
 - **React Flow**: Used for creating interactive roadmap visualizations.
-- **React Router 7.5**: Latest and most advanced routing for react.
+- **React Router 7.6**: Latest and most advanced routing for react.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Material UI**: UI theme used by Google.
+- **Express JS**: Backend web framework used to handle server-side logic, API routes, and middleware.
 
 ---
 
