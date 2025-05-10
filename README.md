@@ -25,6 +25,8 @@ This project is still under development, and here’s what's on the way:
 
 Feel free to contribute, suggest features, or open issues!
 
+---
+
 ## Tech Stack
 
 - **React**: Frontend framework for building the UI.
