@@ -25,6 +25,15 @@ This project is still under development, and here’s what's on the way:
 
 Feel free to contribute, suggest features, or open issues!
 
+## Tech Stack
+
+- **React**: Frontend framework for building the UI.
+- **React Flow**: Used for creating interactive roadmap visualizations.
+- **React Router 7.6**: Latest and most advanced routing for react.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Material UI**: UI theme used by Google.
+- **Express JS**: Backend web framework used to handle server-side logic, API routes, and middleware.
+
 ---
 
 ## Installation
@@ -46,17 +55,6 @@ To run this project locally:
    ```bash
    npm start
    ```
-
----
-
-## Tech Stack
-
-- **React**: Frontend framework for building the UI.
-- **React Flow**: Used for creating interactive roadmap visualizations.
-- **React Router 7.6**: Latest and most advanced routing for react.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Material UI**: UI theme used by Google.
-- **Express JS**: Backend web framework used to handle server-side logic, API routes, and middleware.
 
 ---
 
