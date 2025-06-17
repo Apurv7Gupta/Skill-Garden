@@ -1,14 +1,13 @@
-import configJson from "./auth_config.json";
-
 export function getConfig() {
   const audience =
-    configJson.audience && configJson.audience !== "{yourApiIdentifier}"
-      ? configJson.audience
+    import.meta.env.VITE_AUTH0_AUDIENCE &&
+    import.meta.env.VITE_AUTH0_AUDIENCE !== "{yourApiIdentifier}"
+      ? import.meta.env.VITE_AUTH0_AUDIENCE
       : null;
 
   return {
-    domain: configJson.domain,
-    clientId: configJson.clientId,
-    ...(audience ? { audience } : null),
+    domain: import.meta.env.VITE_AUTH0_DOMAIN || "",
+    clientId: import.meta.env.VITE_AUTH0_CLIENT_ID || "",
+    ...(audience ? { audience } : {}),
   };
 }

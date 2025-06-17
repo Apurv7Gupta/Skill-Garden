@@ -46,12 +46,12 @@ const LoginBtn = () => {
         <div>
           {isAuthenticated ? null : (
             <Button
-              variant="outlined"
+              variant="contained"
               onClick={() => {
                 TryloginWithPopup();
               }}
             >
-              Login
+              Sign in
             </Button>
           )}
         </div>
