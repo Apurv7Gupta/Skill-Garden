@@ -1,7 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
 import { Button, Snackbar } from "@mui/material";
-import Dropdown from "./dropdown";
+import Dropdown from "./Dropdown";
 const LoginBtn = () => {
   const { user, isAuthenticated, loginWithPopup, loginWithRedirect, logout } =
     useAuth0();
