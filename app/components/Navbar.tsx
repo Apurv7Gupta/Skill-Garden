@@ -2,6 +2,9 @@ import { NavLink } from "react-router";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import Dropdown from "./dropdown";
+import { User } from "@auth0/auth0-react";
+import LoginBtn from "./loginbtn";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -90,9 +93,7 @@ const Navbar = () => {
           </NavLink>
 
           {/* Sign In Button */}
-          <Button variant="contained" sx={{ ml: 2 }}>
-            Sign In
-          </Button>
+          <LoginBtn />
         </Box>
 
         {/* Mobile Menu Items */}

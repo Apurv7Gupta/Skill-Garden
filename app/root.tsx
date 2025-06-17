@@ -8,10 +8,18 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { useState, useEffect } from "react";
 import type { Route } from "./+types/root";
 import "./app.css";
 import { Box, Button, Container } from "@mui/material";
 import Navbar from "~/components/Navbar";
+import { createBrowserHistory } from "history";
+import { getConfig } from "./config";
+import { Auth0Provider } from "@auth0/auth0-react";
+
+//Auth0 contraption
+const config = getConfig();
+//Auth0 contraptionEnd
 
 // LINKS
 
@@ -54,9 +62,39 @@ export function Layout({ children }: { children: React.ReactNode }) {
 // APP
 
 export default function App() {
+  const [history, setHistory] = useState<any>(null); // ← added
+  useEffect(() => {
+    const h = createBrowserHistory(); // ← added
+    setHistory(h); // ← added
+  }, []);
+
+  if (!history) return null; // ← added
+
+  const onRedirectCallback = (appState: any) => {
+    history.push(
+      appState && appState.returnTo
+        ? appState.returnTo
+        : window.location.pathname
+    );
+  };
+
+  const providerConfig = {
+    domain: config.domain,
+    clientId: config.clientId,
+    onRedirectCallback,
+    authorizationParams: {
+      redirect_uri: window.location.origin,
+      ...(config.audience ? { audience: config.audience } : {}),
+    },
+    cacheLocation: "localstorage" as const,
+    useRefreshTokens: true,
+  };
+
   return (
-    <>
-      <Navbar />
+    <Auth0Provider {...providerConfig}>
+      {" "}
+      {/* ← moved Auth0Provider to wrap everything */}
+      <Navbar /> {/* ← now inside Auth0Provider */}
       <Container
         disableGutters
         maxWidth={false}
@@ -66,7 +104,7 @@ export default function App() {
           <Outlet />
         </main>
       </Container>
-    </>
+    </Auth0Provider>
   );
 }
 
