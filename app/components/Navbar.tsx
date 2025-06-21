@@ -38,12 +38,9 @@ const Navbar = () => {
               Skill Garden
             </Typography>
           </NavLink>
-          <Button
-            variant="contained"
-            sx={{ display: { xs: "block", sm: "none" } }}
-          >
-            Sign In
-          </Button>
+          <Box sx={{ display: { xs: "block", sm: "none" } }}>
+            <LoginBtn />
+          </Box>
         </div>
 
         {/* Desktop Menu */}
