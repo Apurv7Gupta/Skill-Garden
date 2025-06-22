@@ -48,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body
-        className="min-h-screen min-w-[450px]
+        className="min-h-screen
        bg-[#05365e]"
       >
         {children}

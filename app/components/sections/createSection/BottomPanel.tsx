@@ -1,6 +1,6 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
-export default function LeftPanel() {
+export default function BottomPanel() {
   return (
     <>
       <Button
@@ -38,18 +38,17 @@ export default function LeftPanel() {
             bgcolor: "lavender",
             borderRadius: 2,
             flexWrap: "nowrap", // stay in one row
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
           }}
         >
           <Button
             variant="contained"
             color="error"
             sx={{
-              fontSize: {
-                xs: "0.3rem",
-                sm: "0.4rem",
-                md: "0.6rem",
-                lg: "0.9rem",
-              },
+              fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
               px: {
                 xs: 1,
                 sm: 1.5,
@@ -70,12 +69,7 @@ export default function LeftPanel() {
             variant="contained"
             color="info"
             sx={{
-              fontSize: {
-                xs: "0.3rem",
-                sm: "0.4rem",
-                md: "0.6rem",
-                lg: "0.9rem",
-              },
+              fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
               px: {
                 xs: 1,
                 sm: 1.5,

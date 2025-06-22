@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 shadow p-4 min-w-[450px]">
+    <nav className="bg-gray-800 shadow p-4 w-full overflow-x-auto">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between">
         <div className=" flex items-center justify-between mb-4 sm:mb-0">
           <NavLink to="/" className="flex text-2xl font-bold text-emerald-400">

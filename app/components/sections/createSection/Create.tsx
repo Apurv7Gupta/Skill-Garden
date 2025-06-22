@@ -19,22 +19,19 @@ const edgeTypes = {
   StraightEd: StraightEd,
   ButtonEd: ButtonEd,
 };
+
 export default function Create() {
   const { nodes, edges, onNodesChange, onEdgesChange, onConnect } =
     useFlowState();
+
   return (
     <Box
       sx={{
-        flexBasis: {
-          xs: "60%",
-          sm: "60%",
-          md: "60%",
-          lg: "60%",
-        },
-        minWidth: 250,
-        maxWidth: 1000,
-        height: "100vh",
+        flex: "1 1 auto", // allow flex growth and shrink
+        minWidth: 0, // allow flex child to shrink below content width if needed
+        height: "100%", // fill parent's height, not viewport height
         bgcolor: "#043437",
+        overflow: "hidden", // hide scrollbars inside ReactFlow container
       }}
     >
       <ReactFlow

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import LeftPanel from "~/components/sections/createSection/LeftPanel";
-import RightPanel from "~/components/sections/createSection/RightPanel";
+import TopPanel from "~/components/sections/createSection/TopPanel";
 import Create from "~/components/sections/createSection/Create";
+import BottomPanel from "~/components/sections/createSection/BottomPanel";
 
 export function meta() {
   return [{ title: "Create | Skill Garden" }];
@@ -10,38 +10,46 @@ export function meta() {
 export default function CreateRoadmap() {
   return (
     <>
-      {/* Left Panel */}
-      <Box sx={{ display: "flex", height: "100vh" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" }, // stack on mobile
+          height: "100vh",
+          width: "100%",
+          overflowX: "auto", // prevent overflow zoom
+        }}
+      >
+        {/* Top Panel */}
         <Box
           sx={{
-            flexBasis: {
-              xs: "20%", // 20% width on extra small screens
-              sm: "20%",
-              md: "20%",
-            },
-            minWidth: 100,
+            width: { xs: "100%", md: "20%" },
+            minWidth: { md: 100 },
             bgcolor: "#05365e",
           }}
         >
-          <LeftPanel />
+          <TopPanel />
         </Box>
 
-        {/* Center React Flow Panel */}
-        <Create />
-
-        {/* Right Panel */}
+        {/* Center Panel */}
         <Box
           sx={{
-            flexBasis: {
-              xs: "20%",
-              sm: "20%",
-              md: "20%",
-            },
-            minWidth: 100,
+            flex: 1,
+            minWidth: 0, // important for flex children to not overflow
+            overflow: "hidden", // no accidental scrollbars
+          }}
+        >
+          <Create />
+        </Box>
+
+        {/* Bottom Panel */}
+        <Box
+          sx={{
+            width: { xs: "100%", md: "20%" },
+            minWidth: { md: 100 },
             bgcolor: "#05365e",
           }}
         >
-          <RightPanel />
+          <BottomPanel />
         </Box>
       </Box>
     </>
