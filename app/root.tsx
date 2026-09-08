@@ -48,8 +48,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body
-        className="min-h-screen
-       bg-[#05365e]"
+        className="min-h-screen"
+        style={{ background: '#0A0A0A' }}
       >
         {children}
         <ScrollRestoration />
@@ -98,7 +98,7 @@ export default function App() {
       <Container
         disableGutters
         maxWidth={false}
-        className="bg-[#05365e] h-[100vh] w-full"
+      className="bg-[#0A0A0A] min-h-screen w-full"
       >
         <main>
           <Outlet />

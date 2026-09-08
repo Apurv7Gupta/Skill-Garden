@@ -1,14 +1,9 @@
 import { DefaultNode, TextUpdaterNode } from "~/components/Nodes";
 import { ButtonEd, StraightEd } from "~/components/Edges";
 import { Box } from "@mui/material";
-import Flowdata from "~/Data/Flowdata.json";
 import useFlowState from "~/Data/useFlowState";
-import { ReactFlow, Background, Controls } from "@xyflow/react";
+import { ReactFlow, Background, Controls, BackgroundVariant } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-
-export function meta() {
-  return [{ title: "Create | Skill Garden" }];
-}
 
 const nodeTypes = {
   textUpdater: TextUpdaterNode,
@@ -27,11 +22,11 @@ export default function Create() {
   return (
     <Box
       sx={{
-        flex: "1 1 auto", // allow flex growth and shrink
-        minWidth: 0, // allow flex child to shrink below content width if needed
-        height: "100%", // fill parent's height, not viewport height
-        bgcolor: "#043437",
-        overflow: "hidden", // hide scrollbars inside ReactFlow container
+        flex: "1 1 auto",
+        minWidth: 0,
+        height: "100%",
+        background: "#0A0A0A",
+        overflow: "hidden",
       }}
     >
       <ReactFlow
@@ -43,9 +38,22 @@ export default function Create() {
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         fitView
+        style={{ background: "#0A0A0A" }}
       >
-        <Background />
-        <Controls />
+        <Background
+          variant={BackgroundVariant.Dots}
+          color="rgba(255,255,255,0.07)"
+          gap={20}
+          size={1}
+        />
+        <Controls
+          style={{
+            background: "rgba(18,18,18,0.90)",
+            border: "1px solid rgba(255,255,255,0.10)",
+            borderRadius: 8,
+            boxShadow: "none",
+          }}
+        />
       </ReactFlow>
     </Box>
   );

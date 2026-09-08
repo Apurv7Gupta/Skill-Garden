@@ -1,105 +1,157 @@
-import { Box, Typography, Button, TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import Search from "@mui/icons-material/Search";
 
 export default function TopPanel() {
   return (
-    <>
-      <Button
-        variant="contained"
-        color="success"
-        fullWidth
+    <Box sx={{ display: "flex", flexDirection: "column", gap: 0 }}>
+      {/* Section label */}
+      <Box
         sx={{
-          borderRadius: 0,
-          color: "white",
-          fontWeight: 400,
-          fontSize: { xs: "0.7rem", sm: "1rem", md: "1.5rem" },
+          px: 2,
+          pt: 2.5,
+          pb: 1,
         }}
       >
-        Add
-      </Button>
+        <p
+          style={{
+            fontSize: "0.75rem",
+            fontWeight: 500,
+            letterSpacing: "0.02em",
+            color: "rgba(255,255,255,0.40)",
+            textTransform: "uppercase",
+            margin: 0,
+          }}
+        >
+          Add Nodes
+        </p>
+      </Box>
 
-      <Box sx={{ p: 2 }}>
+      {/* Search bar */}
+      <Box sx={{ px: 2, pb: 1.5 }}>
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            bgcolor: "teal",
-            borderRadius: 2,
-            px: { xs: 0.5, sm: 1, md: 2 },
             gap: 1,
+            px: 1.5,
+            py: "8px",
+            borderRadius: "8px",
+            border: "1px solid rgba(255,255,255,0.10)",
+            background: "rgba(255,255,255,0.03)",
+            transition: "all 100ms ease-out",
+            "&:focus-within": {
+              borderColor: "rgba(139,92,246,0.50)",
+              background: "rgba(255,255,255,0.05)",
+            },
           }}
         >
           <Search
-            sx={{
-              color: "white",
-              fontSize: { xs: "1.1rem", sm: "1.5rem", md: "2rem" },
-            }}
+            sx={{ color: "rgba(255,255,255,0.35)", fontSize: 16, flexShrink: 0 }}
           />
-
           <TextField
-            color="primary"
-            placeholder="Node Type/Name"
+            placeholder="Node type / name"
+            variant="standard"
             fullWidth
-            sx={{
-              fontSize: { xs: "0.7rem", sm: "0.9rem", md: "1rem" },
-              maxWidth: 500,
-              flexGrow: 1,
-              bgcolor: "teal",
-              border: "none",
+            InputProps={{
+              disableUnderline: true,
+              sx: {
+                fontSize: "0.813rem",
+                color: "rgba(255,255,255,0.80)",
+                "& input::placeholder": {
+                  color: "rgba(255,255,255,0.30)",
+                  opacity: 1,
+                },
+              },
             }}
           />
         </Box>
       </Box>
 
-      {/* Buttons */}
+      {/* Action buttons */}
       <Box
         sx={{
           px: 2,
+          pb: 2,
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          gap: 1,
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            gap: 2,
+        {/* Add Node */}
+        <button
+          style={{
             width: "100%",
-            maxWidth: 600,
-            bgcolor: "lavender",
-            borderRadius: 2,
-            p: { xs: 1, sm: 2 },
+            padding: "9px 16px",
+            fontSize: "0.813rem",
+            fontWeight: 500,
+            color: "#FAFAFA",
+            background: "rgba(139,92,246,1)",
+            border: "none",
+            borderRadius: 8,
+            cursor: "pointer",
+            transition: "all 100ms ease-out",
+            textAlign: "center",
+            minHeight: 36,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(124,58,237,1)";
+            e.currentTarget.style.transform = "scale(0.98)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "rgba(139,92,246,1)";
+            e.currentTarget.style.transform = "scale(1)";
+          }}
+          onMouseDown={(e) => {
+            e.currentTarget.style.transform = "scale(0.97)";
+          }}
+          onMouseUp={(e) => {
+            e.currentTarget.style.transform = "scale(0.98)";
           }}
         >
-          <Button
-            variant="contained"
-            color="success"
-            sx={{
-              fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
-              px: 3,
-              py: 1,
-              width: "100%",
-              flex: 1,
-            }}
-          >
-            Add Node
-          </Button>
-          <Button
-            variant="contained"
-            color="secondary"
-            sx={{
-              fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
-              px: 3,
-              py: 1,
-              width: "100%",
-              flex: 1,
-            }}
-          >
-            Add Branch
-          </Button>
-        </Box>
+          Add Node
+        </button>
+
+        {/* Add Branch */}
+        <button
+          style={{
+            width: "100%",
+            padding: "9px 16px",
+            fontSize: "0.813rem",
+            fontWeight: 500,
+            color: "rgba(255,255,255,0.75)",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.10)",
+            borderRadius: 8,
+            cursor: "pointer",
+            transition: "all 100ms ease-out",
+            textAlign: "center",
+            minHeight: 36,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.09)";
+            e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
+            e.currentTarget.style.color = "rgba(255,255,255,0.95)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+            e.currentTarget.style.borderColor = "rgba(255,255,255,0.10)";
+            e.currentTarget.style.color = "rgba(255,255,255,0.75)";
+          }}
+          onMouseDown={(e) => {
+            e.currentTarget.style.transform = "scale(0.98)";
+          }}
+          onMouseUp={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
+          }}
+        >
+          Add Branch
+        </button>
       </Box>
-    </>
+
+      {/* Structural separator */}
+      <Box
+        sx={{ borderTop: "1px solid rgba(255,255,255,0.08)", mx: 0 }}
+      />
+    </Box>
   );
 }

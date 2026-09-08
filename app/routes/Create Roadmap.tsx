@@ -9,49 +9,53 @@ export function meta() {
 
 export default function CreateRoadmap() {
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        height: "calc(100vh - 60px)", // account for navbar height
+        width: "100%",
+        overflow: "hidden",
+      }}
+    >
+      {/* Left Panel */}
       <Box
         sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" }, // stack on mobile
-          height: "100vh",
-          width: "100%",
-          overflowX: "auto", // prevent overflow zoom
+          width: { xs: "100%", md: 220 },
+          flexShrink: 0,
+          borderRight: { md: "1px solid rgba(255,255,255,0.08)" },
+          borderBottom: { xs: "1px solid rgba(255,255,255,0.08)", md: "none" },
+          background: "#111111",
+          overflowY: "auto",
         }}
       >
-        {/* Top Panel */}
-        <Box
-          sx={{
-            width: { xs: "100%", md: "20%" },
-            minWidth: { md: 100 },
-            bgcolor: "#05365e",
-          }}
-        >
-          <TopPanel />
-        </Box>
-
-        {/* Center Panel */}
-        <Box
-          sx={{
-            flex: 1,
-            minWidth: 0, // important for flex children to not overflow
-            overflow: "hidden", // no accidental scrollbars
-          }}
-        >
-          <Create />
-        </Box>
-
-        {/* Bottom Panel */}
-        <Box
-          sx={{
-            width: { xs: "100%", md: "20%" },
-            minWidth: { md: 100 },
-            bgcolor: "#05365e",
-          }}
-        >
-          <BottomPanel />
-        </Box>
+        <TopPanel />
       </Box>
-    </>
+
+      {/* Center Canvas */}
+      <Box
+        sx={{
+          flex: 1,
+          minWidth: 0,
+          overflow: "hidden",
+        }}
+      >
+        <Create />
+      </Box>
+
+      {/* Right Panel */}
+      <Box
+        sx={{
+          width: { xs: "100%", md: 220 },
+          flexShrink: 0,
+          borderLeft: { md: "1px solid rgba(255,255,255,0.08)" },
+          borderTop: { xs: "1px solid rgba(255,255,255,0.08)", md: "none" },
+          background: "#111111",
+          overflowY: "auto",
+        }}
+      >
+        <BottomPanel />
+      </Box>
+    </Box>
   );
 }

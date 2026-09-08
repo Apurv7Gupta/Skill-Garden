@@ -1,7 +1,6 @@
 import { NavLink } from "react-router";
 import { Container, Typography, Button, Box } from "@mui/material";
 import { HeroImage } from "~/components/sections/HeroImage";
-import { Blur } from "~/components/blur";
 import Footer from "~/components/sections/Footer";
 import Cards from "~/components/Cards";
 import Preview from "~/components/Preview";
@@ -13,7 +12,15 @@ export function meta() {
 const home = () => {
   return (
     <>
-      <Container disableGutters maxWidth={false}>
+      <Container
+        disableGutters
+        maxWidth={false}
+        sx={{
+          background: '#0A0A0A',
+          minHeight: '100vh',
+        }}
+      >
+        {/* Hero Section */}
         <Container
           disableGutters
           maxWidth={false}
@@ -25,8 +32,10 @@ const home = () => {
             },
             alignItems: "center",
             justifyContent: "space-between",
-            p: 2,
-            gap: 2,
+            px: { xs: 2, sm: 4, lg: 8 },
+            pt: { xs: 6, lg: 10 },
+            pb: { xs: 4, lg: 8 },
+            gap: { xs: 4, lg: 6 },
           }}
         >
           {/* Text and Button Column */}
@@ -34,176 +43,207 @@ const home = () => {
             sx={{
               width: { lg: "50%", xs: "100%" },
               textAlign: { lg: "left", xs: "center" },
-              alignSelf: "center",
             }}
           >
             <Typography
-              variant="h1"
+              component="h1"
               sx={{
-                background: "linear-gradient(to right, #2563EB, #7C3AED)",
-                backgroundClip: "text",
-                color: "transparent",
-                pt: { lg: 10 },
                 fontSize: {
-                  xs: "1.75rem",
-                  sm: "2.7rem",
-                  lg: "3rem",
+                  xs: "2.5rem",
+                  sm: "3rem",
+                  lg: "4rem",
                 },
-                ml: "0.5rem",
+                fontWeight: 500,
+                letterSpacing: "-0.04em",
+                lineHeight: 1.1,
+                color: 'rgba(255, 255, 255, 0.95)',
+                mb: 3,
               }}
             >
-              <Blur />
               Build, Track & Share Your Dev Learning Journey
             </Typography>
 
-            {/* Button outside Typography */}
-            <Box
+            <Typography
               sx={{
-                pt: {
-                  xs: 3,
-                  sm: 5,
-                },
+                fontSize: "0.875rem",
+                fontWeight: 400,
+                color: 'rgba(255, 255, 255, 0.65)',
+                mb: 4,
+                lineHeight: 1.6,
+                maxWidth: { lg: "90%", xs: "100%" },
+                mx: { xs: "auto", lg: 0 },
               }}
             >
-              <Button
-                fullWidth
-                sx={{
-                  alignSelf: "center",
-                  px: { xs: 2, sm: 4 },
-                  py: { xs: 1, sm: 2 },
-                }}
-                variant="contained"
-              >
-                <NavLink to={"/Explore"}>
-                  <Typography variant="h6">Explore Roadmaps</Typography>
-                </NavLink>
-              </Button>
+              Create interactive roadmaps, visualize your progress, and connect your learning path—node by node.
+            </Typography>
+
+            <Box
+              sx={{
+                display: 'flex',
+                gap: 2,
+                flexDirection: { xs: 'column', sm: 'row' },
+                justifyContent: { xs: 'center', lg: 'flex-start' },
+              }}
+            >
+              <NavLink to="/Explore" style={{ textDecoration: 'none', width: '100%', maxWidth: { xs: '100%', sm: 'auto' } }}>
+                <Button
+                  sx={{
+                    px: 4,
+                    py: 1.5,
+                    fontSize: "0.875rem",
+                    fontWeight: 500,
+                    textTransform: 'none',
+                    borderRadius: '8px',
+                    background: 'rgba(139, 92, 246, 1)',
+                    color: '#FAFAFA',
+                    border: 'none',
+                    transition: 'all 100ms ease-out',
+                    width: { xs: '100%', sm: 'auto' },
+                    minHeight: { xs: '44px', sm: '40px' },
+                    '&:hover': {
+                      background: 'rgba(124, 58, 237, 1)',
+                      transform: 'scale(0.98)',
+                    },
+                    '&:focus': {
+                      outline: 'none',
+                      boxShadow: '0 0 0 2px #0A0A0A, 0 0 0 4px rgba(139, 92, 246, 0.6)',
+                    },
+                  }}
+                >
+                  Explore Roadmaps
+                </Button>
+              </NavLink>
             </Box>
           </Box>
 
-          {/* Hero Section */}
+          {/* Hero Image */}
           <HeroImage />
         </Container>
 
+        {/* Feature Cards */}
         <Cards />
 
-        {/* Section 2*/}
+        {/* Create Section */}
         <Container
           disableGutters
           maxWidth={false}
           sx={{
-            display: "flex",
-            flexDirection: {
-              xs: "column",
-              lg: "row",
-            },
-            alignItems: "center",
-            justifyContent: "space-between",
-            pt: { xs: 5 },
-            pb: { lg: 10, sm: 10 },
-            gap: 2,
+            px: { xs: 2, sm: 4, lg: 8 },
+            pt: { xs: 8, lg: 12 },
+            pb: { xs: 6, lg: 10 },
+            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
           }}
         >
-          {/* Text and Button Column */}
           <Box
             sx={{
               display: "flex",
-              flexDirection: { lg: "row", sm: "row", xs: "column-reverse" },
-              width: "100%",
-              textAlign: { lg: "right", xs: "center" },
-              alignSelf: "center",
-              p: 5,
+              flexDirection: { xs: "column", lg: "row" },
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: { xs: 4, lg: 6 },
             }}
           >
-            {/* Button outside Typography */}
-            <Box
-              sx={{
-                width: { xs: "100%", lg: "40%" },
-                pt: {
-                  xs: 3,
-                },
-                pr: {
-                  lg: 3,
-                  sm: 3,
-                },
-              }}
-            >
-              <NavLink to={"create"}>
-                <Button
-                  fullWidth
-                  sx={{
-                    alignSelf: "center",
-                    px: { xs: 2, sm: 4 },
-                    py: { xs: 1, sm: 2 },
-                  }}
-                  variant="contained"
-                >
-                  <Typography sx={{ fontSize: { lg: "2rem" } }}>
-                    Create a path
-                  </Typography>
-                </Button>
-              </NavLink>
-            </Box>
             <Typography
-              variant="h1"
+              component="h2"
               sx={{
-                background: "linear-gradient(to right, #2563EB, #7C3AED)",
-                backgroundClip: "text",
-                color: "transparent",
-
                 fontSize: {
-                  xs: "1.6rem",
+                  xs: "1.5rem",
                   sm: "2rem",
                   lg: "3rem",
                 },
+                fontWeight: 500,
+                letterSpacing: "-0.02em",
+                lineHeight: 1.2,
+                color: 'rgba(255, 255, 255, 0.9)',
+                textAlign: { xs: "center", lg: "left" },
+                flex: 1,
               }}
             >
-              create your own learning paths, and monitor your progress using
-              interactive nodes
+              Create your own learning paths, and monitor your progress using interactive nodes
             </Typography>
+
+            <Box sx={{ width: { xs: '100%', lg: 'auto' } }}>
+              <NavLink to="create" style={{ textDecoration: 'none' }}>
+                <Button
+                  sx={{
+                    px: 4,
+                    py: 1.5,
+                    fontSize: "0.875rem",
+                    fontWeight: 500,
+                    textTransform: 'none',
+                    borderRadius: '8px',
+                    background: 'rgba(255, 255, 255, 0.06)',
+                    color: '#FAFAFA',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    transition: 'all 100ms ease-out',
+                    width: { xs: '100%', lg: 'auto' },
+                    minHeight: { xs: '44px', sm: '40px' },
+                    '&:hover': {
+                      background: 'rgba(255, 255, 255, 0.10)',
+                      borderColor: 'rgba(255, 255, 255, 0.20)',
+                    },
+                    '&:focus': {
+                      outline: 'none',
+                      boxShadow: '0 0 0 2px #0A0A0A, 0 0 0 4px rgba(139, 92, 246, 0.6)',
+                    },
+                  }}
+                >
+                  Create a Path
+                </Button>
+              </NavLink>
+            </Box>
           </Box>
         </Container>
-        <Typography
-          sx={{
-            width: "100%",
-            textAlign: "center",
-            color: "white",
-            p: 5,
-            fontSize: {
-              xs: "1.6rem",
-              sm: "2rem",
-              lg: "3rem",
-            },
-          }}
-        >
-          Try it yourself
-        </Typography>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Preview />
-          {/* <iframe
-          src="https://codesandbox.io/embed/drx6s4?view=preview&module=%2Fsrc%2Fnodes%2Findex.js"
-          className="lg:w-[500px] lg:h-[500px] border-0 rounded-sm overflow-hidden sm:w-auto sm:h-auto"
-          title="unruffled-glade-drx6s4"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe> */}
-        </Box>
 
-        <Typography
+        {/* Interactive Preview Section */}
+        <Container
+          disableGutters
+          maxWidth={false}
           sx={{
-            width: "100%",
-            textAlign: "center",
-            color: "white",
-            p: 5,
-            fontSize: {
-              xs: "1.6rem",
-              sm: "2rem",
-              lg: "3rem",
-            },
+            px: { xs: 2, sm: 4, lg: 8 },
+            pt: { xs: 8, lg: 12 },
+            pb: { xs: 12, lg: 16 },
           }}
         >
-          Plan. Learn. Track.
-        </Typography>
+          <Typography
+            component="h2"
+            sx={{
+              fontSize: {
+                xs: "1.5rem",
+                sm: "2rem",
+                lg: "3rem",
+              },
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              color: 'rgba(255, 255, 255, 0.9)',
+              textAlign: "center",
+              mb: 6,
+            }}
+          >
+            Try it yourself
+          </Typography>
+
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 8 }}>
+            <Preview />
+          </Box>
+
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "1.5rem",
+                sm: "2rem",
+                lg: "3rem",
+              },
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              color: 'rgba(255, 255, 255, 0.9)',
+              textAlign: "center",
+            }}
+          >
+            Plan. Learn. Track.
+          </Typography>
+        </Container>
+
         <Footer />
       </Container>
     </>
